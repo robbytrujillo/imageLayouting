@@ -1,0 +1,487 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.7;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 650px;
+
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.72)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 25px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  opacity: 0.65;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  width: 90%;
+  max-width: 900px;
+
+  margin: auto;
+
+  padding-top: 120px;
+
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+
+  padding: 7px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  border-radius: 30px;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 25px;
+}
+
+.hero-content h1 {
+  font-size: clamp(42px, 7vw, 75px);
+
+  line-height: 1.15;
+
+  margin-bottom: 25px;
+
+  letter-spacing: -2px;
+}
+
+.hero-content h1 span {
+  display: block;
+
+  font-style: italic;
+}
+
+.hero-content p {
+  max-width: 600px;
+
+  margin: auto;
+
+  color: #e2e8f0;
+
+  font-size: 16px;
+}
+
+.hero-button {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 15px;
+
+  margin-top: 35px;
+
+  padding: 14px 25px;
+
+  background: white;
+
+  color: #0f172a;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 100px 0;
+}
+
+.section-heading {
+  text-align: center;
+
+  max-width: 650px;
+
+  margin: 0 auto 55px;
+}
+
+.section-heading span,
+.about-content > span {
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  font-weight: 600;
+
+  color: #64748b;
+}
+
+.section-heading h2 {
+  font-size: 42px;
+
+  line-height: 1.2;
+
+  margin: 12px 0;
+
+  letter-spacing: -1px;
+}
+
+.section-heading p {
+  color: #64748b;
+}
+
+/* =========================
+   CARD GRID
+========================= */
+
+.card-container {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+}
+
+/* =========================
+   CARD IMAGE
+========================= */
+
+.card-image {
+  height: 240px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.08);
+}
+
+.category {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  padding: 6px 13px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  backdrop-filter: blur(5px);
+
+  border-radius: 30px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.card-content {
+  padding: 25px;
+}
+
+.card-content h3 {
+  font-size: 21px;
+
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  color: #64748b;
+
+  font-size: 14px;
+
+  margin-bottom: 20px;
+}
+
+.read-more {
+  color: #0f172a;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  padding-left: 5px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  background: #0f172a;
+
+  color: white;
+
+  padding: 100px 20px;
+
+  text-align: center;
+}
+
+.about-content {
+  max-width: 700px;
+
+  margin: auto;
+}
+
+.about-content > span {
+  color: #94a3b8;
+}
+
+.about-content h2 {
+  font-size: 45px;
+
+  line-height: 1.2;
+
+  margin: 15px 0 20px;
+}
+
+.about-content p {
+  color: #cbd5e1;
+
+  font-size: 15px;
+}
+
+.about-content button {
+  margin-top: 30px;
+
+  padding: 13px 25px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: white;
+
+  color: #0f172a;
+
+  font-family: inherit;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.about-content button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 25px;
+
+  background: #020617;
+
+  color: #94a3b8;
+
+  text-align: center;
+
+  font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content {
+    padding-top: 100px;
+  }
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .navbar {
+    width: 85%;
+  }
+
+  .nav-menu {
+    gap: 15px;
+  }
+
+  .nav-menu a {
+    font-size: 12px;
+  }
+
+  .hero-content {
+    padding-top: 100px;
+  }
+
+  .hero-content h1 {
+    font-size: 43px;
+
+    letter-spacing: -1px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .gallery-section {
+    padding: 70px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .card-image {
+    height: 230px;
+  }
+
+  .about {
+    padding: 75px 20px;
+  }
+
+  .about-content h2 {
+    font-size: 35px;
+  }
+}
